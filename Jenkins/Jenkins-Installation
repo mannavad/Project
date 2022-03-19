@@ -1,0 +1,41 @@
+#Insatlling Jenkins on AWS EC2 Ubuntu
+
+#Prerequisites
+
+ 1.EC2 Instance 
+ 2.Security Group with Port 8080 open for internet
+ 
+
+#Get the latest version of jenkins from URl :https://pkg.jenkins.io/debian-stable/
+
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \
+    /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+    
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+    https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+    /etc/apt/sources.list.d/jenkins.list > /dev/null
+  
+  sudo apt-get update
+  sudo apt-get install fontconfig openjdk-11-jre
+  sudo apt-get install jenkins
+  
+  #To start Jenkins 
+  sudo systemctl start jenkins 
+  
+  #To stop Jenkins  
+  sudo systemctl stop jenkins
+  
+  #To restart jenkins 
+  sudo systemctl restart jenkins 
+  
+  #To check the status of jenkins 
+  sudo systemctl status jenkins 
+  
+  #Accessing Jenkins
+  http://YOUR-SERVER-PUBLIC-IP:8080
+  
+ #Configure Jenkins
+  The default Username is admin
+  default Password Location:/var/lib/jenkins/secrets/initialAdminPassword
+  
+  
