@@ -1,0 +1,19 @@
+#Configuring Git pulgin on Jenkins
+
+#Install Git on Jenkins server
+sudo apt-get install -y git
+
+#Install Github plugin on jenkins UI
+Manage Jenkins > Jenkins Plugins > available > github
+
+#Configure Git on jenkins GUI
+Manage Jenkins > Global Tool Configuration > git
+  
+
+#Configuring Maven pulgin on Jenkins
+
+Install Maven on Jenkins
+
+Download maven packages https://maven.apache.org/download.cgi onto Jenkins server. Usinf  /opt/maven as my installation directory
+
+https://dlcdn.apache.org/maven/maven-3/3.8.5/binaries/apache-maven-3.8.5-bin.tar.gz
