@@ -5,6 +5,8 @@
  1.EC2 Instance 
  2.Security Group with Port 8080 open for internet
  
+sudo apt install default-jdk
+sudo apt-get install -y git  maven
 
 #Get the latest version of jenkins from URl :https://pkg.jenkins.io/debian-stable/
 
